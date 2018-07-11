@@ -1,0 +1,23 @@
+{
+  "name": "michaelscott",
+  "version": "0.0.1",
+  "description": "An API to generate random Michael Scott Quotes",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "Michael Scott",
+    "Quotes",
+    "Great Scott"
+  ],
+  "author": "Oscar Gonzalez",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
