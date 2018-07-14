@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 MongoClient.connect(url, (err, client) => {
 	const db = client.db(dbName)
-	//ERROR HANDLING
+
 	assert.equal(null, err)
 	//RUN EXPRESS SERVER
 	app.listen(port, () => {
@@ -27,15 +27,3 @@ MongoClient.connect(url, (err, client) => {
 	routes(app, db)
 
 })
-
-const findDocuments = (db, callback) => {
-	//GET DOCUMENTS FROM COLLECTION
-	const collection = db.collection('quotes')
-
-	collection.find({}).toArray((err, docs) => {
-		assert.equal(err, null)
-		console.log('Found the following records')
-		console.log(docs)
-		callback(docs)
-	})
-}
